@@ -28,7 +28,7 @@ O código de extração é dividido em 4 etapas:
 - Quarta e última etapa: realiza o agrupamente de frames de acordo com o valor da média de movimento entre frames.
 Dependendo da versão do matlab e do opencv utilizadas esse valor pode variar e gerar agrupamentos diferentes para o mesmo limiar. Varie entre limiares de 0.25 a 0.35 para obter o resultado desejado.
 
-Se não quiser regerar as features e utilizar as que foram geradas no projeto, faça o download das mesmas no link: [https://drive.google.com/drive/folders/1pPgOgs3SepgIjjaUx2m7Fl0q9Y5XXada?usp=sharing](https://drive.google.com/drive/folders/1pPgOgs3SepgIjjaUx2m7Fl0q9Y5XXada?usp=sharing) o link contém um .mat para cada frame agrupado. No link []() há um .mat com a estrutura informando quais os índices originais dos frames agrupados e no link []() é possível baixar também os mapas de fixação individuais e de grupo originais e agrupados utilizando os mesmos indíces. 
+Se não quiser regerar as features e utilizar as que foram geradas no projeto, faça o download das mesmas no link: [https://drive.google.com/drive/folders/1pPgOgs3SepgIjjaUx2m7Fl0q9Y5XXada?usp=sharing](https://drive.google.com/drive/folders/1pPgOgs3SepgIjjaUx2m7Fl0q9Y5XXada?usp=sharing) o link contém um .mat para cada frame agrupado. No link [https://drive.google.com/file/d/1Pct7_37W4ji4_q3aEec7Dhk8JgP-0XNH/view?usp=sharing](https://drive.google.com/file/d/1Pct7_37W4ji4_q3aEec7Dhk8JgP-0XNH/view?usp=sharing) há um .mat com a estrutura informando quais os índices originais dos frames agrupados e no link [https://drive.google.com/drive/folders/1uPQIJJ8fTzS3YHLev-oRvh6-wGdRjems?usp=sharing](https://drive.google.com/drive/folders/1uPQIJJ8fTzS3YHLev-oRvh6-wGdRjems?usp=sharing) é possível baixar também os mapas de fixação individuais e de grupo originais e agrupados utilizando os mesmos indíces. 
 
 ### 2. Geração de mapas de fixação
 As funções que estão na pasta Aux_Methods geram os mapas de fixação. 
@@ -58,15 +58,16 @@ Como citado antes, podem ocorrer diferenças nos resultados obtidos. Um dos moti
 Outro é que houve uma confusão nos índices das features dos resultados descritos, as features que geram melhores resultados são as que estão cravadas no arquivo trainAndTestModel na opção 0 do select, variável que define a técnica de Seleção de features.
 
 ## TODO - Melhorias sugeridas
-[ ] Trocar o agrupamento de features para ser realizado com um algoritmo de similaridade de imagens (como ssme) ao invés de limiar de movimento
+- [ ] Revisar e reorganizar o código de geração de mapas
 
-[ ] Revisar e reorganizar o código de geração de mapas
+- [ ] Separar a etapa de treinamento em seleção de features, treinamento dos modelos e definição do critério de classificação de TEA
 
-[ ] Separar a etapa de treinamento em seleção de features, treinamento dos modelos e definição do critério de classificação de TEA
+- [ ] Limpar arquivos não utilizados
 
-[ ] Limpar arquivos não utilizados
+- [ ] Corrigir o código de seleção de features de algoritmo genético
 
-[ ] Corrigir o código de seleção de features por algoritmo genético
+- [ ] Trocar o agrupamento de features para ser realizado com um algoritmo de similaridade de imagens (como ssim) ao invés de limiar de movimento
+
 
 
 ## Caso utilize este projeto, favor citar os responsáveis:

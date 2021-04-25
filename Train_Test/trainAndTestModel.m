@@ -28,19 +28,19 @@ Y = double([ones(1, length(posIndices)), zeros(1, length(negIndices))])'; %train
 % Select Features
 fprintf('Selecting features...');
 switch logical(true)
-case select==0, 
+case select==1, 
         case group==1,
             fprintf('Features TEA');
             features = [6, 10, 13, 14, 17, 18, 20, 24, 25, 26, 28, 29, 30, 31, 32]
         case group==2,
             fprintf('Features CTRL');
             features = [6, 7, 9, 10, 13, 14, 17, 18, 20, 24, 25, 26, 28, 29, 32]
-case select==1,
+case select==2,
     [r,w] = relieff(X,Y,60);
     numFeatures = length(w(w>mean(w)))
     features = r(1:numFeatures)
     X = X(:,features);
-case select==2, 
+case select==3, 
     features = GA_feature_selector(numFeatures,X,Y)
     X = X(:,features);
     otherwise

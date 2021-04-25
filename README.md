@@ -58,15 +58,15 @@ Como citado antes, podem ocorrer diferenças nos resultados obtidos. Um dos moti
 Outro é que houve uma confusão nos índices das features dos resultados descritos, as features que geram melhores resultados são as que estão cravadas no arquivo trainAndTestModel na opção 0 do select, variável que define a técnica de Seleção de features.
 
 ## TODO - Melhorias sugeridas
-[ ] Revisar e reorganizar o código de geração de mapas
+- [ ] Revisar e reorganizar o código de geração de mapas
 
-[ ] Separar a etapa de treinamento em seleção de features, treinamento dos modelos e definição do critério de classificação de TEA
+- [ ] Separar a etapa de treinamento em seleção de features, treinamento dos modelos e definição do critério de classificação de TEA
 
-[ ] Limpar arquivos não utilizados
+- [ ] Limpar arquivos não utilizados
 
-[ ] Corrigir o código de seleção de features de algoritmo genético
+- [ ] Corrigir o código de seleção de features de algoritmo genético
 
-[ ] Trocar o agrupamento de features para ser realizado com um algoritmo de similaridade de imagens (como ssim) ao invés de limiar de movimento
+- [ ] Trocar o agrupamento de features para ser realizado com um algoritmo de similaridade de imagens (como ssim) ao invés de limiar de movimento
 
 
 

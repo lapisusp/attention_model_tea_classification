@@ -40,7 +40,7 @@ O arquivo consolida.m dentro da pasta FixationMaps agrupa os mapas de fixação 
 
 ### 3. Seleção de features
 Há dois métodos de seleção disponíveis: relieff e Algoritmo Genético. A implementação com algoritmo genético não está retornando bons resultados, é necessário trocar a implementação. 
-Atualmente a seleção de caracteristicas é feita durante o processo de validação cruzada ao se chamar a função trainAndTestModel, o parâmetro select define se vão ser utilizadas direto as features utilizadas no projeto (0), se será selecionado com relieff (1), com algoritmo genético (2) ou todas as variáveis.
+Atualmente a seleção de caracteristicas é feita durante o processo de validação cruzada ao se chamar a função trainAndTestModel, o parâmetro select define se vão ser utilizadas direto as features utilizadas no projeto (1), se será selecionado com relieff (2), com algoritmo genético (3) ou todas as variáveis.
 
 Há uma pequena diferença nas features que estão no código e nas descritas na dissertação, as que retornam um resultado melhorado estão no código.
 
@@ -51,6 +51,8 @@ Os modelos são treinados no arquivo trainAndTestModel. Atualmente há 3 opçõe
 ### 5. Definição do critério de classificação de TEA
 
 O arquivo execClass.m já realiza a validação cruzada com o treinamento do modelo, incluindo a etapa de seleção de variáveis e avalia se ao comparar o mapa gerado pelo modelo com os mapas individuais é possível classificar um indivíduo corretamente como TEA ou DT. Para isso compara todos os frames de um indivíduo e cria a curva ROC. A partir da curva ROC é possível aplicar o método de Youden para definir o threshold de quantos frames são necessários para essa classificação.
+
+Para executar o código de acordo com o projeto original, após gerar as matrizes de features e os mapas de fixação execute a função execClass com os seguintes parâmetros: `execClass(1,1,15,350)`
 
 
 ## Possíveis diferenças de resultados obtidos entre o código atual e o publicado na dissertação:
